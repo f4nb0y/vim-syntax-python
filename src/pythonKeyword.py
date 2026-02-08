@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''Map Python keywords to Vim syntax items'''
+"""Map Python keywords to Vim syntax items"""
 
 from collections import defaultdict
 import inspect
@@ -7,49 +7,45 @@ import keyword
 import os.path
 import sys
 
-keywordGroups = {
+kwGroups = {
+    # https://vimhelp.org/syntax.txt.html#group-name
+    'None': 'Constant',
     'False': 'Boolean',
-    'None': 'Boolean',
+    'True': 'Boolean',
     #
-    'True': 'Constant',
-    #
+    'break': 'Statement',
+    'class': 'Statement',
+    'continue': 'Statement',
+    'def': 'Statement',
+    'del': 'Statement',
+    'global': 'Statement',
+    'nonlocal': 'Statement',
+    'pass': 'Statement',
+    'return': 'Statement',
+    'with': 'Statement',
+    'yield': 'Statement',
+    'elif': 'Conditional',
+    'else': 'Conditional',
+    'if': 'Conditional',
+    'for': 'Repeat',
+    'while': 'Repeat',
     'and': 'Operator',
     'is': 'Operator',
     'not': 'Operator',
     'or': 'Operator',
-    #
-    'elif': 'Conditional',
-    'else': 'Conditional',
-    'if': 'Conditional',
-    #
-    'for': 'Repeat',
-    'while': 'Repeat',
-    #
+    'as': 'Keyword',
+    'async': 'Keyword',
+    'await': 'Keyword',
+    'from': 'Keyword',
+    'in': 'Keyword',
+    'lambda': 'Keyword',
     'except': 'Exception',
     'finally': 'Exception',
     'raise': 'Exception',
     'try': 'Exception',
     #
-    'as': 'Include',
     'import': 'Include',
-    'from': 'Include',
-    #
-    'assert': 'Keyword',
-    'async': 'Keyword',
-    'await': 'Keyword',
-    'break': 'Keyword',
-    'class': 'Keyword',
-    'continue': 'Keyword',
-    'def': 'Keyword',
-    'del': 'Keyword',
-    'global': 'Keyword',
-    'in': 'Keyword',
-    'lambda': 'Keyword',
-    'nonlocal': 'Keyword',
-    'pass': 'Keyword',
-    'return': 'Keyword',
-    'with': 'Keyword',
-    'yield': 'Keyword',
+    'assert': 'Debug',
 }
 
 
@@ -59,13 +55,15 @@ def die(msg: str):
 
 
 if __name__ == '__main__':
+    for kw in kwGroups:
+        if kw not in keyword.kwlist:
+            die(f'Unknown keyword: {kw}')
     for kw in keyword.kwlist:
-        if kw not in keywordGroups:
+        if kw not in kwGroups:
             die(f'Ungrouped keyword: {kw}')
 
-    for kw, group in sorted(keywordGroups.items()):
-        print(f'syntax keyword {kw:15} python{keywordGroups[kw]}')
+    for kw, group in sorted(kwGroups.items()):
+        print(f'syntax keyword {kw:15} python{kwGroups[kw]}')
     print()
-
-    for group in sorted(set(keywordGroups.values())):
+    for group in sorted(set(kwGroups.values())):
         print(f'highlight default link python{group:15} {group}')
