@@ -17,8 +17,10 @@ This alternate syntax highlighting aims to:
 
 ### How?
 
-This is the interesting part. Is it possible to mechanically translate Python parser definitions
-into a working syntax file?
+This is the interesting part. Is it possible to mechanically translate Python [grammar] into Vim
+[syntax]?
 
+[grammar]: https://docs.python.org/3/reference/grammar.html
 [python syntax highlighting]: https://github.com/vim/vim/blob/master/runtime/syntax/python.vim
+[syntax]: https://vimhelp.org/syntax.txt.html
 [syntax groups]: https://vimhelp.org/syntax.txt.html#group-name
