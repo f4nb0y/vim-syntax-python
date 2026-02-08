@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Map Python keywords to Vim syntax items"""
 
-from collections import defaultdict
 import inspect
 import keyword
 import os.path
