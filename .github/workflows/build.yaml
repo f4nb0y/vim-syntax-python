@@ -13,9 +13,6 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      env:
-        ARTIFACT: ${{ runner.temp }}/python.vim
-
       - name: Checkout
         uses: actions/checkout@v6
 
@@ -26,9 +23,9 @@ jobs:
 
       - name: Run
         run: |
-          python3 src/python2vim.py > "${{ env.ARTIFACT }}"
+          python3 src/python2vim.py > "${{ runner.temp }}/python.vim"
 
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          path: ${{ env.ARTIFACT }}
+          path: ${{ runner.temp }}/python.vim
