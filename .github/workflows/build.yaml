@@ -23,7 +23,7 @@ jobs:
 
       - name: Run
         run: |
-          python3 src/python2vim.py > "${{ runner.temp }}/python.vim"
+          python3 src/python2vim.py > '${{ runner.temp }}/python.vim'
 
       - name: Upload
         uses: actions/upload-artifact@v4
