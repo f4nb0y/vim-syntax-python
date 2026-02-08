@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map Python keywords to Vim syntax items"""
+"""Map keywords to syntax groups"""
 
 import inspect
 import keyword
