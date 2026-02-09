@@ -23,12 +23,10 @@ set cpo&vim
 '''
 
 footer = '''
-let b:current_syntax = "python"
-
 let &cpo = s:_cpo
 unlet s:_cpo
 
-" vim: shiftwidth=2 softtabstop=2 expandtab'''
+let b:current_syntax = expand('<script>:t:r')'''
 
 
 def die(msg: str):
