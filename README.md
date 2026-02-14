@@ -11,14 +11,15 @@ It is also incomplete, and difficult to update.
 This alternate syntax highlighting aims to:
 
 - Support all valid Python syntax, including archaic features such as `%` string formatting
-- Support all default Vim [syntax groups], including constants, operators and types
+- Support all default Vim syntax groups, including constants, operators and types
 - Test all highlighting with every change
 - Enable all highlighting by default
 
 ### How?
 
-This is the interesting part. Is it possible to mechanically translate Python parser definitions
-into a working syntax file?
+This is the interesting part. Is it possible to mechanically translate Python [grammar] into Vim
+[syntax]?
 
-[python syntax highlighting]: https://github.com/vim/vim/blob/master/runtime/syntax/python.vim
-[syntax groups]: https://vimhelp.org/syntax.txt.html#group-name
+[grammar]: https://docs.python.org/3/reference/grammar.html
+[Python syntax highlighting]: https://github.com/vim/vim/blob/master/runtime/syntax/python.vim
+[syntax]: https://vimhelp.org/syntax.txt.html
