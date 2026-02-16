@@ -10,7 +10,7 @@ Syntax highlighting is a fun project with immediate results, but the edge cases 
   @nascheme, then rewritten by @zvezdan in 2010. It contains many special cases, and some
   impressively dense regular expressions. It is also incomplete, and difficult to update.
 
-- Many folks recommened https://github.com/sheerun/vim-polyglot which loads
+- Many folks recommend https://github.com/sheerun/vim-polyglot which loads
   https://github.com/vim-python/python-syntax, which was last updated in 2020 for the `:=` operator.
 
 - There is also https://github.com/kh3phr3n/python-syntax (2021),
