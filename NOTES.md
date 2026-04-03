@@ -35,7 +35,7 @@ In contrast, https://vimhelp.org/options.txt.html#%27iskeyword%27 says
 
 Which takes us back to to https://vimhelp.org/pattern.txt.html#%2F%5Ck
 
-    \k	keyword character (see 'iskeyword' option)	/\k
-    \K	like "\k", but excluding digits			/\K
+    \k  keyword character (see 'iskeyword' option)      /\k
+    \K  like "\k", but excluding digits                 /\K
 
 This appears to be our best option?
