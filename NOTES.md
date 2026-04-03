@@ -10,6 +10,8 @@ From https://docs.python.org/3/reference/lexical_analysis.html#names-identifiers
 > * the underscore (`_`),
 > * digits (`0` through `9`), which cannot appear as the first character, and
 > * non-ASCII characters. Valid names may only contain “letter-like” and “digit-like” characters; see Non-ASCII characters in names for details.
+>
+> Names must contain at least one character, but have no upper length limit. Case is significant.
 
 So we need corresponding Vim character classes, and the obvious starting point is https://vimhelp.org/pattern.txt.html#%2F%5Cw
 
@@ -38,4 +40,6 @@ Which takes us back to to https://vimhelp.org/pattern.txt.html#%2F%5Ck
     \k  keyword character (see 'iskeyword' option)      /\k
     \K  like "\k", but excluding digits                 /\K
 
-This appears to be our best option?
+So out identifier match should be
+
+    \K\k*
