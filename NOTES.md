@@ -18,7 +18,7 @@ So we need corresponding Vim character classes, and the obvious starting point i
     \h  head of word character:         [A-Za-z_]       /\h
     \H  non-head of word character:     [^A-Za-z_]      /\H
 
-But this doesn't include Unicode identifier classes. A better option appears to be https://vimhelp.org/pattern.txt.html#%2F%5Ci
+But this doesn't include Unicode identifiers. A better option appears to be https://vimhelp.org/pattern.txt.html#%2F%5Ci
 
     \i  identifier character (see 'isident' option)     /\i
     \I  like "\i", but excluding digits                 /\I
