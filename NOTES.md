@@ -40,6 +40,6 @@ Which takes us back to to https://vimhelp.org/pattern.txt.html#%2F%5Ck
     \k  keyword character (see 'iskeyword' option)      /\k
     \K  like "\k", but excluding digits                 /\K
 
-So out identifier match should be
+So the Vim pattern for Python names is
 
     \K\k*
