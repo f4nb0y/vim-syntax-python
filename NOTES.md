@@ -1,6 +1,6 @@
-# NOTES
+# Notes
 
-### Character Classes
+### Python Names
 
 From https://docs.python.org/3/reference/lexical_analysis.html#names-identifiers-and-keywords
 
